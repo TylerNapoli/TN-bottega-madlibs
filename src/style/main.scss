@@ -64,8 +64,9 @@
 }
 
 .card {
-    height: 736px;
-    width: 994px;
+    min-height: 736px;
+    max-height:994px;
+    width: 1240px;
     box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.06);
     border-radius: 7px;
 
@@ -95,6 +96,7 @@
 
     button {
         justify-self: center;
+        transform: translate(50%);
     }
 
     &__generate {
@@ -105,6 +107,23 @@
     &__clear {
         background-color: #45b0e5;
         @include button;
+    }
+
+    &__content {
+        width: 1100px;
+        height: 297px;
+        background-color: #f2f2f2;
+
+        justify-self: center;
+        margin-bottom: 84px;
+
+        P {
+            line-height: 29px;
+            padding: 50px 47px;
+            font-family: 'Montserrat';
+            font-size: 16px;
+            font-weight: 300;
+        }
     }
 }
 
