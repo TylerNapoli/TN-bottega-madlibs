@@ -1,4 +1,5 @@
 .home {
+    position: relative;
     background-color: rgba(207, 207, 207, 0.06);
     display: grid;
 
@@ -9,11 +10,34 @@
 
 .header {
     align-self: center;
+
+    &__skew {
+        -webkit-clip-path: polygon(0 0, 100% 0%, 100% 25%, 0 50%);
+        clip-path: polygon(0 0, 100% 0%, 100% 25%, 0 50%);
+        z-index: -10;
+        left: 0;
+        top: 0;
+        position: absolute;
+        height: 110vh;
+        width: 100vw;
+        background-color: #444444;
+    }
+    &__border {
+        -webkit-clip-path: polygon(0 0, 100% 0%, 100% 25%, 0 50%);
+        clip-path: polygon(0 48%, 100% 23%, 100% 25%, 0 50%);
+        z-index: -10;
+        left: 0;
+        top: 0;
+        position: absolute;
+        height: 110vh;
+        width: 100vw;
+        background-color: #00cb79;
+    }
 }
 
 .card {
     height: 736px;
-    width: 1240px;
+    width: 994px;
     box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.06);
     border-radius: 7px;
 
@@ -34,7 +58,8 @@
 
 .input {
     display: grid;
-    grid-template-columns: [number-s] 26px [number-e ] [input-s] 1fr [input-e];
+    // grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: [number-s] 26px [number-e input-s] 1fr [input-e];
 
     &__title{
         grid-column: input-s/input-e;
