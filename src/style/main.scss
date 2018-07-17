@@ -104,17 +104,18 @@
 
     button {
         justify-self: center;
-        transform: translateY(50%);
     }
 
     &__generate {
         background-color: #00cb79;
         @include button;
+        transform: translateY(-300px);
     }
 
     &__clear {
         background-color: #45b0e5;
         @include button;
+        transform: translateY(50%);
     }
 
     &__content {
